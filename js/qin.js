@@ -9,7 +9,7 @@
         }
     });
 
-    $.fn.string = function (options) {
+    $.fn.qin = function (options) {
         var defaults = {
             offset: 22,  // 最大偏移量
             duration: 500,  // 晃动时间
