@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>琴弦文字</title>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: 'microsoft yahei';
+        }
+        
+        .wrap {
+            width: 500px;
+            height: 300px;
+            box-shadow: 0 0 26px 3px #2ad;
+            margin: 50px auto;
+            padding: 30px 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .wrap p {
+            position: relative;
+            font-size: 16px;
+            color: #333;
+            height: 16px;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <p>琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字</p>
+        <p>The string words.The string words.The string words.</p>
+        <p>琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字</p>
+        <p>The string words.The string words.The string words.</p>
+        <p>琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字琴弦文字</p>
+        <p>The string words.The string words.The string words.</p>
+    </div>
+    <script src="lib/jquery.js"></script>
+    <script src="js/string.js"></script>
+    <script>
+        $(".wrap p").string({
+            offset:22, // default , 最大偏移量
+            duration:500, // default , 晃动时间
+            recline:0.1 // default , 每像素偏移量，越小“琴弦绷的越紧”
+        });
+    </script>
+</body>
+
+</html>

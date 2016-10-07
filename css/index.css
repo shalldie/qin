@@ -1,0 +1,28 @@
+html,
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'microsoft yahei';
+}
+
+.wrap{
+    width: 500px;
+    height: 300px;
+    box-shadow: 0 0 26px 3px #2ad;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.wrap p{
+    position: relative;
+    border-bottom: 1px dashed #666;
+    font-size: 16px;
+    color: #333;
+    height: 16px;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
