@@ -26,11 +26,17 @@
     };
 
     function fillSpan($ele) {
-        var content = [
-            '<span>',
-            [].join.call($ele.html(), '</span><span>'),
-            '</span>'
-        ].join('');
+        // var content = [
+        //     '<span>',
+        //     [].join.call($ele.html(), '</span><span>'),
+        //     '</span>'
+        // ].join(''); // IE9+
+        var baseContent = $ele.html();
+        var content = '';
+        for (var i = 0, len = baseContent.length; i < len; i++) {
+            // content += '<span>' + baseContent[i] + '</span>' // IE8+
+            content += '<span>' + baseContent.substr(i, 1) + '</span>' // 兼容到IE6...
+        }
         $ele.html(content);
         var positionArr = [];  //存放原始位置
         $ele.children('span').each(function () {
@@ -43,7 +49,7 @@
             });
             setTimeout(function () {
                 $span.css("position", "absolute");
-            }, 100);
+            }, 0);
         });
         $ele.data("stringPosition", positionArr);
     }
